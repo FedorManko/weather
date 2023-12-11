@@ -17,12 +17,12 @@ import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.verify;
 
-import com.andersen.weather.WeatherServiceImpl;
 import com.andersen.weather.dto.request.WeatherRequestDto;
 import com.andersen.weather.dto.response.WeatherResponseDto;
 import com.andersen.weather.entity.Weather;
 import com.andersen.weather.mapper.WeatherMapper;
 import com.andersen.weather.repository.WeatherRepository;
+import com.andersen.weather.service.impl.WeatherServiceImpl;
 import jakarta.persistence.EntityNotFoundException;
 import java.time.LocalDate;
 import java.util.List;

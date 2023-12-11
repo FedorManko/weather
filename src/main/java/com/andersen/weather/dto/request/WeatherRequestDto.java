@@ -6,7 +6,6 @@ import static com.andersen.weather.util.ErrorCodeConstants.LAT_IS_INCORRECT;
 import static com.andersen.weather.util.ErrorCodeConstants.LON_IS_INCORRECT;
 import static com.andersen.weather.util.ErrorCodeConstants.STATE_NAME_IS_TOO_LONG;
 
-import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import java.util.List;

@@ -1,14 +1,21 @@
 version: '3.8'
 
 services:
+  myapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    environment:
+      - SPRING_PROFILES_ACTIVE=new
+      - DATABASE_URL=jdbc:postgresql://localhost:5432/weather
   postgresql:
-    container_name: ms-client_postgresql
+    container_name: weather_postgresql
     image: postgres
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_DB: client
+      POSTGRES_DB: weather
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: qwerty
-
-
