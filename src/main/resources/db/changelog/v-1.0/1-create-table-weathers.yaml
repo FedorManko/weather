@@ -1,0 +1,40 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: f.manko@andersenlab.com
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      preConditions:
+        - onFail: MARK_RAN
+        - not:
+            - tableExists:
+                tableName: weather
+      changes:
+        - createTable:
+            tableName: weather
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_weathers
+                  autoIncrement: true
+              - column:
+                  name: date
+                  type: date
+              - column:
+                  name: lat
+                  type: varchar(8)
+              - column:
+                  name: lon
+                  type: varchar(8)
+              - column:
+                  name: city
+                  type: varchar(30)
+              - column:
+                  name: state
+                  type: varchar(30)
+              - column:
+                  name: temperatures
+                  type: varchar(255)
