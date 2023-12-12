@@ -39,6 +39,7 @@ dependencies {
     annotationProcessor "org.mapstruct:mapstruct-processor:$mapstruct_version"
     testAnnotationProcessor "org.mapstruct:mapstruct-processor:$mapstruct_version"
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'com.h2database:h2:2.1.214'
 }
 
 jacoco {

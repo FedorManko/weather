@@ -26,7 +26,7 @@ public class SecurityConfig {
         .authorizeHttpRequests(request -> request
             .requestMatchers("/", "/swagger-ui/**", "/api-docs/**", "/actuator/**")
             .permitAll()
-            .requestMatchers(GET, "/weather").permitAll()
+            .requestMatchers(GET, "/weather/**").permitAll()
             .anyRequest().authenticated());
 
     http.oauth2ResourceServer(

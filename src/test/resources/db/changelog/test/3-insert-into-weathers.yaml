@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: f.manko@andersenlab.com
+      changes:
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: id
+                  value: '1'
+              - column:
+                  name: date
+                  value: '1985-01-01'
+              - column:
+                  name: lat
+                  value: '36.1189'
+              - column:
+                  name: lon
+                  type: '-86.6892'
+              - column:
+                  name: city
+                  type: 'Nashville'
+              - column:
+                  name: state
+                  type: 'Tennessee'

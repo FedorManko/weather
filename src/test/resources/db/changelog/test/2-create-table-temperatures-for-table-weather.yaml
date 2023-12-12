@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: f.manko@andersenlab.com
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      preConditions:
+        - onFail: MARK_RAN
+        - not:
+            - tableExists:
+                tableName: temperatures
+      changes:
+        - createTable:
+            tableName: weather_temperatures
+            columns:
+              - column:
+                  name: weather_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: temperatures
+                  type: varchar(250)
+        - addForeignKeyConstraint:
+            baseTableName: weather_temperatures
+            baseColumnNames: weather_id
+            referencedTableName: weather
+            referencedColumnNames: id
+            constraintName: fk_weather_temperatures_weather_id
+

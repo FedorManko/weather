@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: 4
+      author: f.manko@andersenlab.com
+      changes:
+        - insert:
+            tableName: weather_temperatures
+            columns:
+              - column:
+                  name: weather_id
+                  value: '1'
+              - column:
+                  name: temperatures
+                  value: '17.3'
+        - insert:
+            tableName: weather_temperatures
+            columns:
+              - column:
+                  name: weather_id
+                  value: '1'
+              - column:
+                  name: temperatures
+                  value: '16.8'
+        - insert:
+            tableName: weather_temperatures
+            columns:
+              - column:
+                  name: weather_id
+                  value: '1'
+              - column:
+                  name: temperatures
+                  value: '16.4'
