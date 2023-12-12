@@ -4,6 +4,7 @@ plugins {
     id 'io.spring.dependency-management' version "$spring_dependency_management_version"
     id 'jacoco'
     id 'checkstyle'
+    id 'war'
 }
 
 group = 'com.andersen'

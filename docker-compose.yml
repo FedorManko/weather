@@ -1,15 +1,12 @@
 version: '3.8'
 
 services:
-  myapp:
-    build:
-      context: .
-      dockerfile: Dockerfile
+  web:
+    image: tomcat
+    volumes:
+      - .build/libs/weather-0.0.1-SNAPSHOT-plain.war:/usr/local/tomcat/webapps/weather-0.0.1-SNAPSHOT-plain.war
     ports:
-      - "8081:8081"
-    environment:
-      - SPRING_PROFILES_ACTIVE=local
-      - DATABASE_URL=jdbc:postgresql://localhost:5432/weather
+      - '8082:8080'
   postgresql:
     container_name: weather_postgresql
     image: postgres
